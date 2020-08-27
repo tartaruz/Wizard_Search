@@ -20,6 +20,20 @@ $ export FLASK_APP=hello.py
 $ flask run
 ```
 # Usage 
+> As a retro search engine, just search for what you want! The only limit is your imagination......is the size of the engine :(
+
+The files are copies of Wikipedia with different content. The most relevant for you after pressing search will appear as a list of bottom under the search bar. By clicking on them, you will be navigated to its page
+
+The topics/pages listed in the engine:
+- Bread
+- Clouds
+- Hot Dog
+- Norway
+- Rainbow
+- Sun
+- TV
+
+Click on the logo for a surprise <3 
 
 
 ### Tech
