@@ -3,22 +3,6 @@
 Is a simple search engine based on a previous project [Experimenting_with_TF-IDF](https://github.com/tartaruz/Experimenting_with_TF-IDF) to show how the theory behind TF-IDF works. Explanation about how it works can be found in the ol’ project.
 ![Imagen](../assets/frontPage.png?raw=true)
 
-### Installation
-
-_Wizard Search_ requires [Python](https://nodejs.org/) 3+ to run.
-
-Install the dependencies ...
-
-```sh
-$ pip3 install -r requirements.txt 
-```
-
-Set up the Flask application and run it..
-
-```sh
-$ export FLASK_APP=hello.py
-$ flask run
-```
 # Usage 
 > As a retro search engine, just search for what you want! The only limit is your imagination......is the size of the engine :(
 
@@ -35,6 +19,22 @@ The topics/pages listed in the engine:
 
 Click on the logo for a surprise <3 
 
+### Installation
+
+_Wizard Search_ requires [Python](https://nodejs.org/) 3+ to run.
+
+Install the dependencies ...
+
+```sh
+$ pip3 install -r requirements.txt 
+```
+
+Set up the Flask application and run it..
+
+```sh
+$ export FLASK_APP=hello.py
+$ flask run
+```
 
 ### Tech
 
