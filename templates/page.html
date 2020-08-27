@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+
+{% block title %}
+{{ title}}
+{% endblock %}
+
+{% block body %}
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <a href="/">
+                <i class="fa fa-arrow-circle-left"></i>
+            </a>
+            <br>
+            <img src="../static/img/wizardsearch.png" onclick="sound()" alt="Wizard Search logo" width="30%">
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">{{ title}}</div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <p id="pageBody">
+                {{ body}}
+            </p>
+        </div>
+        <div class="grid-item"></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+
+{% block title %}Wizard Search{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <img src="../static/img/wizardsearch.png" onclick="sound()" alt="Wizard Search logo" width="50%">
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <form method="post">
+                <input type="text" name="searchQuery">
+                <input type="submit" id="button" value="Search">
+            </form>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item" id="results">
+            <div class="flex-container">
+                {% if results is defined%}
+                    <h4>Results</h4>
+                {% endif %}
+                {% for file in results %}
+                    {% if file[1]!=0 %}
+                        <div class="resultBox">
+                             
+                            <a href="/page/{{ file[0] }}">
+                                <i class="fa fa-file-o"></i>
+                                {{ file[0] }} 
+                            </a>
+                        </div>
+                    {% else %}
+                        {{ pass }}
+                    {% endif %}
+                {% endfor %}   
+            </div> 
+        </div>
+        <div class="grid-item"></div>
+    </div>
+{% endblock %}
