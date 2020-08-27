@@ -1,59 +1,35 @@
-# TF-IDF
-An easy and simple TF-IDF to see the real "numbers" in action.
-The programs has a folder with dummy data. The files are the wikipedia page with only the text.
-The basic concept used here is the TF-IDF, term frequency and inverted document frequency. [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
- 
-## Run the program
- 
-Simple, just run it as all other python scripts.
- 
-```bash
-python3 TF-IDF.py
+# Wizard Search ( TDF-IDF search engine)
+
+Is a simple search engine based on a previous project [Experimenting_with_TF-IDF](https://github.com/tartaruz/Experimenting_with_TF-IDF) to show how the theory behind TF-IDF works. Explanation about how it works can be found in the ol’ project.
+![Imagen](../assets/frontPage.png?raw=true)
+
+### Installation
+
+_Wizard Search_ requires [Python](https://nodejs.org/) 3+ to run.
+
+Install the dependencies ...
+
+```sh
+$ pip3 install -r requirements.txt 
 ```
-OR 
 
-You can run the search engine page created for this project called _Wizard Search_. The python framework called **Flask** is used to run and host the page.
+Set up the Flask application and run it..
 
-```bash
-    export FLASK_APP=app.py
-    flask run
+```sh
+$ export FLASK_APP=hello.py
+$ flask run
 ```
-It runs in port :5000
-
-## Usage
- 
-It will ask for the query.
- 
-```bash
-Query? :
-```
-Insert what you want to search for and the TD-IDF will do it's magic!
- 
-## Example
- 
-This will be an example with the query "light ball in space"
- 
-```bash
-Query? : light ball in space
-Name           Result
------------  --------
-tv.txt       1.03163
-norway.txt   0.727054
-clouds.txt   1.23145
-rainbow.txt  1.13365
-sun.txt      1.80236
-Document "sun.txt" is the most relevant
-```
-The results will be presented as a table with the total sum of the weights. The last sentence will be the name of the most relevant file.
+# Usage 
 
 
-## Possible to add more data
-Use the command "data+" to add content to files from wikipedia :)
+### Tech
 
+This project uses:
+
+* [Flask] - Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit. 
+* [Python 3.8] - Python is an interpreted, high-level, general-purpose programming language
+* [HTML/CSS/Javascript] - For rendering of the actual page
 
 ---
-This is the magic spell, TF-IDF: 
+By Thomas Ramirez
 
-![Figure 1-1](https://wikimedia.org/api/rest_v1/media/math/render/svg/cb8cdf7f351b63973cee045cc98c9efcde04203a?raw=true "Figure 1-1")
- 
- 
