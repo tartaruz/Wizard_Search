@@ -3,12 +3,14 @@
 Is a simple search engine based on a previous project [Experimenting_with_TF-IDF](https://github.com/tartaruz/Experimenting_with_TF-IDF) to show how the theory behind TF-IDF works. Explanation about how it works can be found in the ol’ project.
 ![Imagen](../assets/frontPage.png?raw=true)
 
+
+
 # Usage 
 > As a retro search engine, just search for what you want! The only limit is your imagination......is the size of the engine :(
 
 The files are copies of Wikipedia with different content. The most relevant for you after pressing search will appear as a list of bottom under the search bar. By clicking on them, you will be navigated to its page
 
-The topics/pages listed in the engine:
+_The topics/pages listed in the engine:_
 - Bread
 - Clouds
 - Hot Dog
