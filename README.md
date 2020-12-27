@@ -34,7 +34,7 @@ $ pip3 install -r requirements.txt
 Set up the Flask application and run it..
 
 ```sh
-$ export FLASK_APP=hello.py
+$ export FLASK_APP=app.py
 $ flask run
 ```
 
