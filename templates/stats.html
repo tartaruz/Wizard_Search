@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+
+{% block title %}Statistics - Wizard Search{% endblock %}
+
+{% block body %}
+
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <a href="/">
+                <img src="../static/img/wizardsearch.png" alt="Wizard Search logo" width="30%">
+            </a>
+            <h2>Search Engine Statistics</h2>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>📚 Total Pages</h3>
+                    <p class="stat-number">{{ total_pages }}</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>🔍 Search Method</h3>
+                    <p class="stat-number">{{ method|upper }}</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>🤖 BERT Embeddings</h3>
+                    <p class="stat-number">{% if method == 'bert' %}Enabled{% else %}Available{% endif %}</p>
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="/">← Back to Search</a> |
+                <a href="/files">Browse All Pages</a> |
+                <a href="/download">Download More Pages</a>
+            </div>
+        </div>
+        <div class="grid-item"></div>
+    </div>
+
+{% endblock %}
