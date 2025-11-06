@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+
+{% block title %}Download Pages - Wizard Search{% endblock %}
+
+{% block body %}
+
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <a href="/">
+                <img src="../static/img/wizardsearch.png" alt="Wizard Search logo" width="30%">
+            </a>
+            <h2>Download Wikipedia Pages</h2>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            {% if success %}
+                <div class="success-message">
+                    <h3>✅ Success!</h3>
+                    <p>Downloaded {{ count }} Wikipedia page(s).</p>
+                    <p>The search engine has been updated with the new pages.</p>
+                </div>
+            {% endif %}
+
+            <div class="download-form">
+                <form method="post">
+                    <label for="pages">Enter Wikipedia page titles (one per line):</label>
+                    <textarea name="pages" id="pages" rows="10" placeholder="Example:&#10;Artificial_intelligence&#10;Machine_learning&#10;Deep_learning&#10;&#10;Or use spaces (they'll be converted):&#10;Artificial intelligence&#10;Machine learning"></textarea>
+                    <input type="submit" id="button" value="Download Pages">
+                </form>
+
+                <div class="info-box">
+                    <h4>💡 Tips:</h4>
+                    <ul>
+                        <li>Enter one page title per line</li>
+                        <li>Use underscores or spaces for multi-word titles</li>
+                        <li>Make sure the page exists on Wikipedia</li>
+                        <li>Be patient - downloads may take a few seconds per page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="/">← Back to Search</a> |
+                <a href="/files">Browse All Pages</a>
+            </div>
+        </div>
+        <div class="grid-item"></div>
+    </div>
+
+{% endblock %}

@@ -17,31 +17,41 @@
         <div class="grid-item"></div>
         <div class="grid-item">
             <form method="post">
-                <input type="text" name="searchQuery">
+                <input type="text" name="searchQuery" value="{{ query }}" placeholder="Search Wikipedia...">
+                <select name="method" id="method-select">
+                    <option value="tfidf" {% if method == 'tfidf' %}selected{% endif %}>TF-IDF</option>
+                    <option value="bert" {% if method == 'bert' %}selected{% endif %}>BERT</option>
+                </select>
                 <input type="submit" id="button" value="Search">
             </form>
+            <div class="links">
+                <a href="/files">Browse All Pages</a> |
+                <a href="/download">Download New Pages</a> |
+                <a href="/stats">Stats</a>
+            </div>
         </div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         <div class="grid-item" id="results">
             <div class="flex-container">
-                {% if results is defined%}
-                    <h4>Results</h4>
+                {% if results is defined and results %}
+                    <h4>Results for "{{ query }}" ({{ method|upper }})</h4>
                 {% endif %}
                 {% for file in results %}
-                    {% if file[1]!=0 %}
+                    {% if file[1] > 0 %}
                         <div class="resultBox">
-                             
                             <a href="/page/{{ file[0] }}">
                                 <i class="fa fa-file-o"></i>
-                                {{ file[0] }} 
+                                {{ file[0].replace('.txt', '').replace('_', ' ') }}
                             </a>
+                            <span class="score">(Score: {{ "%.3f"|format(file[1]) }})</span>
                         </div>
-                    {% else %}
-                        {{ pass }}
                     {% endif %}
-                {% endfor %}   
-            </div> 
+                {% endfor %}
+                {% if results is defined and not results %}
+                    <p class="no-results">No results found for "{{ query }}"</p>
+                {% endif %}
+            </div>
         </div>
         <div class="grid-item"></div>
     </div>

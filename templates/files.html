@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% block title %}All Pages - Wizard Search{% endblock %}
+
+{% block body %}
+
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <a href="/">
+                <img src="../static/img/wizardsearch.png" alt="Wizard Search logo" width="30%">
+            </a>
+            <h2>All Wikipedia Pages ({{ total }})</h2>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <div class="file-list">
+                {% for file in files %}
+                    <div class="file-item">
+                        <a href="/page/{{ file }}">
+                            <i class="fa fa-file-text-o"></i>
+                            {{ file.replace('.txt', '').replace('_', ' ') }}
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="links">
+                <a href="/">← Back to Search</a> |
+                <a href="/download">Download More Pages</a>
+            </div>
+        </div>
+        <div class="grid-item"></div>
+    </div>
+
+{% endblock %}
